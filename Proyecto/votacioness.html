@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="votaciones.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Consejo de facultad</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://www.uleam.edu.ec/wp-content/uploads/2022/09/imagen-facultad-ciencias-de-la-salud-uleam-2022.jpeg" alt="ima">
+        </div>
+        <h1>Consejo de Facultad</h1>
+    </div>
+
+    <div class="container">
+        <h2>Temas de Votación</h2>
+        <ul id="topics-list">
+            <!-- Aquí se mostrarán los temas ingresados por los usuarios -->
+        </ul>
+
+        <h2>Ingresar un Nuevo Tema</h2>
+        <form id="new-topic-form">
+            <label for="topic">Tema:</label>
+            <input type="text" id="topic" name="topic" required>
+
+            <label for="file">Adjuntar archivo:</label>
+            <input type="file" id="file" name="file">
+
+            <label for="meetingSummary">Resumen del Tema:</label>
+            <textarea id="meetingSummary" name="meetingSummary"></textarea>
+
+            <h3>Lista de Miembros</h3>
+            <ul id="members-list">
+                <!-- Aquí se mostrarán los nombres de los miembros ingresados por los usuarios -->
+            </ul>
+
+            <label for="memberName">Nombre del Miembro:</label>
+            <input type="text" id="memberName" name="memberName">
+            <button type="button" id="addMemberButton">Agregar Miembro</button>
+
+            <input type="submit" value="Agregar Tema">
+        </form>
+
+        <h2>Votación</h2>
+        <form id="voting-form">
+            <label>¿Cuál es tu voto?</label>
+            <div class="radio-buttons">
+                <label>
+                    <input type="radio" name="vote" value="A favor"> A favor
+                </label>
+                <label>
+                    <input type="radio" name="vote" value="En contra"> En contra
+                </label>
+                <label>
+                    <input type="radio" name="vote" value="Abstención"> Abstención
+                </label>
+            </div>
+            <input type="submit" value="Votar">
+        </form>
+
+        <h2>Gráfico de Estadísticas de Votación</h2>
+        <canvas id="voting-chart" width="10" height="10"></canvas>
+
+        <h2>Descargar Información</h2>
+        <a href="#" id="download-data" download="datos.csv">Descargar Datos</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicsList = document.getElementById("topics-list");
+            const newTopicForm = document.getElementById("new-topic-form");
+            const membersList = document.getElementById("members-list");
+            const addMemberButton = document.getElementById("addMemberButton");
+        
+            // Agregar un nuevo tema
+            newTopicForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+        
+                const topicInput = document.getElementById("topic");
+                const meetingSummaryInput = document.getElementById("meetingSummary");
+                const fileInput = document.getElementById("file");
+        
+                const newTopic = document.createElement("li");
+                newTopic.textContent = topicInput.value + " - " + meetingSummaryInput.value;
+                topicsList.appendChild(newTopic);
+        
+                topicInput.value = "";
+                meetingSummaryInput.value = "";
+                fileInput.value = "";
+            });
+        
+            // Agregar un miembro a la lista
+            addMemberButton.addEventListener("click", function () {
+                const memberNameInput = document.getElementById("memberName");
+                const memberName = memberNameInput.value;
+        
+                if (memberName) {
+                    const newMember = document.createElement("li");
+                    newMember.textContent = memberName;
+                    membersList.appendChild(newMember);
+                    memberNameInput.value = "";
+                }
+            });
+        
+            // Generar el gráfico de votaciones
+            const votingChart = new Chart(document.getElementById("voting-chart"), {
+                type: "bar",
+                data: {
+                    labels: ["A favor", "En contra", "Abstención"],
+                    datasets: [
+                        {
+                            label: "Votos",
+                            data: [12, 5, 3], // Modifica estos valores según tus datos
+                            backgroundColor: [
+                                "rgba(75, 192, 192, 0.2)",
+                                "rgba(255, 99, 132, 0.2)",
+                                "rgba(255, 206, 86, 0.2)",
+                            ],
+                            borderColor: [
+                                "rgba(75, 192, 192, 1)",
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(255, 206, 86, 1)",
+                            ],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        
+            // Descargar información
+            const downloadData = document.getElementById("download-data");
+            downloadData.addEventListener("click", function () {
+                // Lógica para descargar datos (por ejemplo, un archivo CSV) aquí.
+            });
+        });
+        </script>
+        
+    
+    <footer>
+        <div class="logo2">
+            <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1678886773/logo_ULEAM_2017_horizontal.png" alt="ima" width="350" height="150" style="width: 350px !important; height: 150px !important;">
+        </div>
+        <nav class="navv">
+            <a href="#"><pre><center>ULEAM @ Copyright 2023, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí</center></pre></a>
+            <a href="#"><pre><center>Dirección: Av. Circunvalación - Vía a San Mateo</center></pre></a>
+            <a href="#"><pre><center>Manta - Manabí - Ecuador</center></pre></a>
+        </nav>
+    </footer>
+</body>
+</html>

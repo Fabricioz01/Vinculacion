@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Repositorio de Documentos</title>
+    <link rel="stylesheet" type="text/css" href="seguimiento.css">
+</head>
+<body>
+    <header>
+        <h1>Repositorio de Documentos</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Subir Documento</h2>
+            <form id="upload-form" action="#" method="post" enctype="multipart/form-data">
+                <label for="file">Selecciona un archivo:</label>
+                <input type="file" id="file" name="file">
+                <button type="submit">Subir</button>
+            </form>
+        </section>
+        <section id="documents-section">
+            <h2>Documentos Subidos</h2>
+            <input type="text" id="search-documents" placeholder="Buscar documentos">
+            <ul id="document-list">
+                <li>
+                    <a href="document1.pdf" target="_blank">Documento 1</a>
+                </li>
+                <li>
+                    <a href="document2.docx" target="_blank">Documento 2</a>
+                </li>
+                <!-- Lista de documentos simulada -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <ul id="uploaded-documents">
+            <!-- Lista de documentos cargados aquí -->
+        </ul>
+    </footer>
+    <script src="seguimiento.js"></script>
+    <footer>
+        <div class="logo2">
+            <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1678886773/logo_ULEAM_2017_horizontal.png" alt="ima" width="350" height="150" style="width: 350px !important; height: 150px !important;">
+        </div>
+        <nav class="navv">
+            <a href="#"><pre><center>ULEAM @ Copyright 2023, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí</center></pre></a>
+            <a href="#"><pre><center>Dirección: Av. Circunvalación - Vía a San Mateo</center></pre></a>
+            <a href="#"><pre><center>Manta - Manabí - Ecuador</center></pre></a>
+        </nav>
+    </footer>
+</body>
+</html>
