@@ -1,0 +1,133 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.navbar .dropdown-content a {
+    color: white;
+    text-align: left;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #555;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar li a {
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para el botón inicial */
+.dropdown-content button {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 16px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Estilos para las opciones */
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Resto de tus estilos existentes */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #141010;
+}
+
+header {
+    text-align: center;
+    background-color: #a0cde0;
+    color: #0c0909;
+    padding: 20px;
+}
+
+.mission-vision-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mission,
+.vision {
+    flex: 1;
+    background-color: #0e913a;
+    padding: 20px;
+    color: #121010;
+    text-align: center;
+}
+
+.mission img,
+.vision img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}

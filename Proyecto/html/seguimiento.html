@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="documento.css">
     <title>Repositorio de Documentos</title>
+    <link rel="stylesheet" type="text/css" href="../css/seguimiento.css">
 </head>
 <body>
     <header>
@@ -19,19 +18,26 @@
                 <button type="submit">Subir</button>
             </form>
         </section>
-        <section id="search-section">
-            <h2>Buscar Documento</h2>
-            <input type="text" id="search-input" placeholder="Escribe el nombre del documento">
-            <button id="search-button">Buscar</button>
-        </section>
         <section id="documents-section">
             <h2>Documentos Subidos</h2>
+            <input type="text" id="search-documents" placeholder="Buscar documentos">
             <ul id="document-list">
-                <!-- Lista de documentos generada dinámicamente -->
+                <li>
+                    <a href="document1.pdf" target="_blank">Documento 1</a>
+                </li>
+                <li>
+                    <a href="document2.docx" target="_blank">Documento 2</a>
+                </li>
+                <!-- Lista de documentos simulada -->
             </ul>
         </section>
     </main>
-    <script src="scripts.js"></script>
+    <footer>
+        <ul id="uploaded-documents">
+            <!-- Lista de documentos cargados aquí -->
+        </ul>
+    </footer>
+    <script src="../script/seguimiento.js"></script>
     <footer>
         <div class="logo2">
             <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1678886773/logo_ULEAM_2017_horizontal.png" alt="ima" width="350" height="150" style="width: 350px !important; height: 150px !important;">
@@ -44,4 +50,3 @@
     </footer>
 </body>
 </html>
-

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Programación y Gestión de Reuniones</title>
+    <link rel="stylesheet" type="text/css" href="../css/reuniones.css">
+</head>
+<body>
+    <header>
+        <h1>Programación y Gestión de Reuniones</h1>
+    </header>
+    <main>
+        <section id="programacion-reunion">
+            <h2>Programar una Reunión</h2>
+            <form id="programar-reunion-form">
+                <label for="nombre">Nombre de la Reunión:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="fecha">Fecha de la Reunión:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora de la Reunión:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <button type="submit">Programar Reunión</button>
+            </form>
+        </section>
+        <section id="lista-reuniones">
+            <h2>Reuniones Programadas</h2>
+            <ul id="reuniones-lista">
+                <!-- Lista de reuniones programadas -->
+            </ul>
+        </section>
+    </main>
+    <script src="../script/reuniones.js"></script>
+</body>
+</html>
+

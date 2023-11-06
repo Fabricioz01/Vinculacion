@@ -1,0 +1,114 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Encabezados de sección */
+section h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+/* Formulario de carga de documentos */
+#upload-form label {
+    font-weight: bold;
+}
+
+#upload-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#upload-form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#upload-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Lista de documentos */
+#document-list {
+    list-style: none;
+    padding: 0;
+}
+
+#document-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#document-list a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#document-list a:hover {
+    text-decoration: underline;
+}
+
+/* Campo de búsqueda de documentos */
+#search-documents {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+
+footer {
+    background-color: #3498db; /* Color de fondo para la franja */
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0; /* Agregar espacio alrededor del contenido del footer */
+}
