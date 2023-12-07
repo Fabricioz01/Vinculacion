@@ -30,7 +30,8 @@ h2 {
 }
 
 .input-group {
-    margin: 10px 0;
+    margin: 10px;
+    width: 90%;
 }
 
 label {
@@ -58,6 +59,9 @@ button {
     cursor: pointer;
 }
 
+button:hover{
+    color:rgb(0, 0, 0);
+}
 footer {
     display: flex;
     align-items: center;
